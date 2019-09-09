@@ -1,0 +1,68 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <classPathEntry location="${classPathEntry.mysql.location}" />
+
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+       <!-- <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>-->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://192.168.3.125:3306/kaida190807?generateSimpleParameterMetadata=true"
+                        userId="root"
+                        password="123456">
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!-- generate Model -->
+        <javaModelGenerator targetPackage="bl.publish.base.entity"
+                            targetProject="${javaModelGenerator.targetProject}">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!-- generate xml -->
+        <sqlMapGenerator targetPackage="bl.publish.base.mapper"
+                         targetProject="${sqlMapGenerator.targetProject}">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <!-- generate Mapper -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="bl.publish.base.mapper"
+                             targetProject="${javaClientGenerator.targetProject}">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+        <!--<table schema="kaida" tableName="customer" domainObjectName="Customer" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />-->
+<!--
+        <table schema="kaida" tableName="customer_currency" domainObjectName="CustomerCurrency" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+-->
+        <!--<table schema="kaida" tableName="customer_third" domainObjectName="CustomerThird" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />-->
+        <!--<table schema="kaida" tableName="machine" domainObjectName="Machine" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />-->
+        <!--<table schema="kaida" tableName="machine_btc" domainObjectName="MachineBtc" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />-->
+        <!--<table schema="kaida" tableName="kd_order" domainObjectName="KdOrder" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+
+        <!--<table schema="kaida" tableName="coin_type" domainObjectName="CoinType" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+
+        <!--<table schema="kaida" tableName="order_status" domainObjectName="OrderStatus" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+
+        <!--<table schema="kaida" tableName="order_detail" domainObjectName="OrderDetail" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+
+        <!--<table schema="kaida" tableName="electric_charge" domainObjectName="ElectricCharge" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <!--<table schema="kaida" tableName="calculate_goods" domainObjectName="CalculateGoods" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <!--<table schema="kaida" tableName="f2_income_data" domainObjectName="F2IncomeData" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <!--<table schema="kaida" tableName="customer_cash" domainObjectName="CustomerCash" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <!--<table schema="kaida" tableName="electric_charge_notes" domainObjectName="ElectricChargeNotes" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <!--<table schema="kaida" tableName="third_order" domainObjectName="ThirdOrder" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <!--<table schema="kaida" tableName="company_plat" domainObjectName="CompanyPlat" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
+        <table schema="kaida190807" tableName="calculate_income_total" domainObjectName="CalculateIncomeTotal" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+
+
+    </context>
+
+</generatorConfiguration>

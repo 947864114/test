@@ -1,0 +1,33 @@
+﻿spring:
+  profiles:
+    active: dev
+  datasource:
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    filters: stat,wall
+    logSlowSql: true
+  application:
+    name: api-mq
+  servlet:
+    multipart:
+      max-file-size: 10Mb
+      max-request-size: 100Mb
+mybatis:
+  mapper-locations: classpath*:com.mq.base.mapper/*.xml,classpath*:com.mq.mapper/*.xml
+  type-aliases-package: com.mq.domain;com.mq.domain.*;
+    com.mq.base.entity;com.mq.base.entity.*;
+    com.mq.mapper;com.mq.mapper.*;
+    com.mq.base.mapper;com.mq.base.mapper.*;
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+logging:
+  execute: true
+  config: classpath:log4j2.yml

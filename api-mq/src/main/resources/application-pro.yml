@@ -1,0 +1,24 @@
+server:
+  port: 8047
+  servlet:
+    context-path: /api-mq
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/kaida?characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&allowMultiQueries=true&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: KDroot_31790
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+  jackson:
+    time-zone: Asia/Shanghai
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+url:
+  client: http://127.0.0.1:8081
+  kex: http://161.117.93.180
